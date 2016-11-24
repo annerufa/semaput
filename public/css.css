@@ -1,0 +1,259 @@
+
+
+#background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+body{
+
+	margin: 0px;
+}
+
+.profil{
+	text-align: center;
+}
+
+.img-profil1{
+	width: 30%;
+}
+
+.tombol-logout{
+	width: 50%;
+	position: center;
+	font-size: 16px;
+	border-color: #74e585;
+	background-color: transparent;
+	border-radius: 40%;
+}
+
+#atas-home{
+	position: relative;
+	top: 3vh;
+}
+
+
+.ilogo{
+	float: right;
+	width: 20%;
+}
+
+
+.tulisan{
+	float: right;
+	width: 65%;
+}
+
+.judul{
+	font-family: roboto;
+	font-size: 60px;
+	margin-bottom: 4vh;
+	margin-top: 5vh;
+}
+
+.subjudul{
+	font-family: roboto;
+	font-size: 24px; 
+}
+
+.subheader{
+	margin-top: 5vh;
+	font-family: roboto;
+	font-size: 16px; 
+	width: 100%;
+	text-align: center;	
+	margin-bottom: 35px;
+}
+
+.pu{
+	color: #ffffff;
+}
+
+.ku{
+	color: #FFEB8C;
+}
+
+.ku2{
+	color: #F8B04A;
+}
+
+.ilogo1{
+	text-align: center;
+}
+
+.ilogo2{
+	width: 50%;
+}
+
+.tlogo2{
+}
+
+
+.rb{
+	font-family: 'Roboto';
+	font-size: 20px;
+}
+
+.ilogo3{
+	width: 20%;
+}
+
+.ilogo4{
+	float: left;
+	margin-right: 25px;
+	width: 70%;
+}
+
+.tulisan3{
+	margin-top: 5vh;
+	font-family: roboto;
+	font-size: 50px;
+}
+
+#menu-kondisi{
+	padding-top: 70px;
+}
+
+.tx-input{
+	font-family: bebas neue;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.fkondisi{
+	margin-bottom: 30px;
+}
+
+.menu{
+	margin-top: 8vh;
+}
+
+.menu1{
+	width: 25%;
+	float: right;
+	margin-right: 30px;
+}
+.menu2{
+	width: 25%;
+	margin-left: 30px;
+}
+.tmenu{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.tmenu1{
+	text-align: center;
+	font-size: 16px;
+	font-family: roboto;
+}
+
+.tmenu2{
+	text-align: center;
+}
+
+.tmenu3{
+}
+
+.tmenu4{
+	text-align: center;
+}
+
+
+.next{
+	position: relative;
+	text-align: center;
+}
+
+.trekap{
+	margin-top: 5vh;
+	font-family: bebas neue;
+	font-size: 40px;
+}
+
+tr:nth-of-type(odd) {
+background-color:  #f6f1c3  ;
+}
+/*footer*/
+
+footer{
+    height: 50px;
+    background:#f0f0f0;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    color:#808080;
+    left: 0;
+}
+
+.versi{
+    margin-left: 30px;
+    margin-top: 20px;
+    float: left;
+    display: inline-block;
+}
+
+.team{
+    margin-top: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.for{
+    margin-right: 30px;
+    margin-top: 20px;
+    float: right;
+}
+
+/*Sign in*/
+.isi{
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.form-login{
+    background-color: #6a6263   ;
+    width:600px;
+    margin: 5px auto;
+    opacity: .9;
+}
+
+.login{
+    padding: 20px;
+}
+
+.login-item{
+    margin-bottom: 15px;
+}
+
+.gg{
+    margin: 15px auto;
+}
+
+.judulform{
+	font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.judullogin{
+    color: #ffffff;
+    font-family: bebas neue, cursive;
+    font-size: 30px;
+}
+
+.forgot{
+    color: #ffffff;
+    text-align: center;
+}
+@media screen and (max-width:478px) {
+	.ilogo{
+		float: left;
+	}
+
+
+}
