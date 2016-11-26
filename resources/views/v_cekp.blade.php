@@ -74,7 +74,7 @@
 
 
 	<div class="next">
-		<a href="cekk.html">
+		<a href="{{URL('cekk')}}">
 			<img src="{{ URL::asset('image/icontombolnext.png') }}">
 		</a>
 	</div>

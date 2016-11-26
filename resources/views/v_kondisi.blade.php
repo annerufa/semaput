@@ -76,7 +76,7 @@
 	</div>
 
 	<div class="next">
-		<a href="{{ route('cek.create') }}">
+		<a href="{{URL('cekn')}}">
 			<img src="{{ URL::asset('image/icontombolnext.png') }}">
 		</a>
 	</div>

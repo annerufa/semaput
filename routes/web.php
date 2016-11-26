@@ -19,12 +19,8 @@ Route::resource('ketua', 'c_ketua');
 Route::resource('anggota', 'c_anggota');
 Route::resource('cek', 'c_cek');
 Route::resource('laporan','c_laporan');
-route::get('cekp', function(){
-	return view ('v_homePetani');
-});
-route::get('/cek/cekk', function(){
-	return view ('v_homePetani');
-});
-route::get('cekph', function(){
-	return view ('v_cekph');
-});
+
+Route::get('cekn','c_cek@cekn');
+Route::get('cekp','c_cek@cekp');
+Route::get('cekk','c_cek@cekk');
+Route::get('cekph','c_cek@cekph');

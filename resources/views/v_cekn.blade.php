@@ -88,7 +88,7 @@
 
 
 	<div class="next">
-		<a href="cekp">
+		<a href="{{URL('cekp')}}">
 			<img src="{{ URL::asset('image/icontombolnext.png') }}">
 		</a>
 	</div>
