@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\m_laporan;
 use App\m_anggota;
-use App\Http\Requests\cek\StoreRequest;
+use App\Http\Requests\anggotaRequest;
 use App\Http\Requests\cek\UpdateRequest;
 
 class c_ketuaPetani extends Controller
@@ -18,7 +18,7 @@ class c_ketuaPetani extends Controller
 
     public function showLaporanAnalisis()
     {
-        $laporans = m_laporan::all();
+        $laporans = m_laporan::orderBy('waktuLaporan', 'DESC')->get();
         $petani = m_anggota::all();
         return view('v_laporanAnalisis', compact('laporans','petani'));
     }
@@ -29,7 +29,7 @@ class c_ketuaPetani extends Controller
         return view('v_DataAnggota', compact('anggotas'));
     }
 
-    public function tambahAnggota(Request $request)
+    public function tambahAnggota(anggotaRequest $request)
     {
         $anggota = new m_anggota();
         $anggota->nama = $request->nama_petani;
