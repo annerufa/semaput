@@ -7,6 +7,8 @@ use App\Http\Requests;
 use App\m_laporan;
 use App\m_anggota;
 use App\m_analisis;
+use Carbon\Carbon;
+use App\Http\Requests\lahanRequest;
 
 class c_petani extends Controller
 {
@@ -25,7 +27,6 @@ class c_petani extends Controller
     public function ubahProfil(Request $request)
     {
         $anggota = m_anggota::find($request->session()->get('id') );
-        $anggota->nama_petani = $request->nama;
         $anggota->alamat = $request->alamat;
         $anggota->tlp = $request->tlp;
         $anggota->password = $request->password;
@@ -34,14 +35,14 @@ class c_petani extends Controller
     }
 
     
-    public function simpanUmurLuas(Request $request){
+    public function simpanUmurLuas(lahanRequest $request){
         $request->session()->put('umurPadi',$request->umurPadi);
         $request->session()->put('luasLahan',$request->luasLahan);
         if ($request->umurPadi>14) {
             return view('v_cekn');  
         }else{
             return view('v_cekp');
-            $request->session()->put('warnaDaun','-');
+            $request->session()->put('warnaDaun','--');
         }
     }
 
@@ -135,7 +136,11 @@ class c_petani extends Controller
         $laporan->id_petani = $request->session()->get('id'); 
         $laporan->luasLahan = $request->session()->get('luasLahan');
         $laporan->umurPadi = $request->session()->get('umurPadi');
-        $laporan->kadarN = $request->session()->get('warnaDaun');
+        if (session()->get('umurPadi')>24) {
+            $laporan->kadarN = $request->session()->get('warnaDaun');
+        } else {
+            $laporan->kadarN = '-';
+        }
         $laporan->kadarP = $request->session()->get('kadarP');
         $laporan->kadarK = $request->session()->get('kadarK');
         $laporan->ph = $request->session()->get('ph');
@@ -144,6 +149,7 @@ class c_petani extends Controller
         $laporan->KCLJ = $request->session()->get('KCLJ');
         $laporan->KCLN = $request->session()->get('KCLN');
         $laporan->ZA = $request->session()->get('za');
+        $laporan->waktuLaporan = Carbon::now();
         $laporan->save();
         $request->session()->forget('luasLahan');
         $request->session()->forget('umurPadi');
