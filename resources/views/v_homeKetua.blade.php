@@ -16,15 +16,16 @@
 <div id="atas-home">
 	<div class="ui grid">
 	  <div class="six wide column">
-	  			<img class="ilogo" src="{{ URL::asset('image/logosemaputpadi.png') }}">
+	  			<a href="{{URL('ketua')}}"> <img class="ilogo" src="{{ URL::asset('image/logosemaputpadi.png') }}"></a>
 	  </div>
 	  <div class="eight wide column">
 	  			<p><div class="judul"><span class="ku">SEMAPUT - PADI</span> </div></p>
 				<p><div class="subjudul"><span class="ku2"> Sistem Manajemen Pupuk Tanaman - Padi</span></div></p>
 	  </div>
 	  <div class="two wide column">
+	  <a href="/logout">
 	  <button class="ui inverted yellow button" style="margin-right: 30px;">Logout</button>
-	  			
+	  			</a>
 	  </div>
 	</div>
 
@@ -40,9 +41,9 @@
 	<div class="menu">
 		<div class="ui grid">
 			<div class="eight wide column">
-			<a href="{{ route('laporan.index') }}"> <img class="menu1" src="{{ URL::asset('image/iconanalisisdata.png') }}"></a>
+			<a href="{{URL('laporanAnalisis')}}"> <img class="menu1" src="{{ URL::asset('image/laporan.png') }}"></a>
 			</div>
-			<div class="eight wide column"><a href="{{ route('anggota.index') }}"> <img class="menu2" src="{{ URL::asset('image/iconpanduan.png') }}"></a></div>
+			<div class="eight wide column"><a href="{{URL('dataAnggota')}}"> <img class="menu2" src="{{ URL::asset('image/anggota.png') }}"></a></div>
 		</div>
 	</div>
 	<div class="tmenu">
