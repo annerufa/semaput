@@ -61,6 +61,7 @@
 			  <thead style="text-align: center;">
 			    <tr >
 			      <th rowspan="2" >No</th>
+			      <th rowspan="2" >Tanggal</th>
 			      <th rowspan="2" >Nama</th>
 			      <th colspan="5" >Kebutuhan Pupuk</th>
 			      <th rowspan="2" >Luas Lahan</th>
@@ -78,13 +79,14 @@
 			  @foreach($laporans as $laporans)
 			    <tr>
 			    	<th>{{$no++}}</th>
+			    	<td>{{ Carbon\Carbon::parse($laporans->waktuLaporan)->format('d-m-Y ') }}</td>
 				    <td>{{$laporans->petani->nama}}</td>
-				    <td>{{$laporans->urea}}</td>
-				    <td>{{$laporans->sp36}}</td>
-				    <td>{{$laporans->KCLJ}}</td>
-				    <td>{{$laporans->KCLN}}</td>
+				    <td>{{$laporans->urea}} kg</td>
+				    <td>{{$laporans->sp36}} kg</td>
+				    <td>{{$laporans->KCLJ}} kg</td>
+				    <td>{{$laporans->KCLN}} kg</td>
 				    <td>{{$laporans->ZA}}</td>
-				    <td>{{$laporans->luasLahan}}</td>
+				    <td>{{$laporans->luasLahan}} ha</td>
 			    </tr>
 			    @endforeach
 			 </tbody>
