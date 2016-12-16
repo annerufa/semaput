@@ -38,7 +38,7 @@ class c_petani extends Controller
     public function simpanUmurLuas(lahanRequest $request){
         $request->session()->put('umurPadi',$request->umurPadi);
         $request->session()->put('luasLahan',$request->luasLahan);
-        if ($request->umurPadi>14) {
+        if ($request->umurPadi>24) {
             return view('v_cekn');  
         }else{
             return view('v_cekp');
