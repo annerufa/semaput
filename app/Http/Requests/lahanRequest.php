@@ -21,11 +21,11 @@ class lahanRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+   public function rules()
     {
         return [
-            'umurPadi' => 'required|numeric',
-            'luasLahan' => 'required|numeric'
+            'umurPadi' => 'required|numeric|min:1',
+            'luasLahan' => 'required|numeric|min:0'
         ];
     }
 
@@ -34,8 +34,10 @@ class lahanRequest extends FormRequest
         return [
             'umurPadi.required' => 'Umur Padi Tidak Boleh Kosong.',
             'luasLahan.required' => 'Luas Lahan Tidak Boleh Kosong.',
-            'umurPadi.numeric' => 'Umur berupa angka.',
-            'luasLahan.numeric' => 'Luas lahan berupa angka.'
+            'umurPadi.numeric' => 'Masukkan data yang valid',
+            'luasLahan.numeric' => 'Masukkan data yang valid',
+            'umurPadi.min' => 'Masukkan data yang valid',
+            'luasLahan.min' => 'Masukkan data yang valid'
         ];
     }
 }
